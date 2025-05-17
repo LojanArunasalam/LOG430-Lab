@@ -41,9 +41,9 @@ jobs:
         pytest src/test_circle.py
     - name: Build Docker Image
       run: |
-        docker build -t circle:latest . 
+        docker build -t lojanarun/circle:latest . 
     - name: Publish to Docker Hub
       run: |
         docker login -u lojanarun -p ${{ secrets.DOCKER_HUB_TOKEN}}
-        docker push circle:latest
+        docker push lojanarun/circle:latest
 
