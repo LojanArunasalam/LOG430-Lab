@@ -1,7 +1,10 @@
 FROM python:3.12
 
-WORKDIR /home/log430/labs/LOG430-Lab
+# As if you were doing "cd .."
+WORKDIR /app
 
 COPY . .
+# RUN command: like trying to run a linux command
+RUN pip install -r requirements.txt
 
 CMD [ "python", "src/circle.py" ]
