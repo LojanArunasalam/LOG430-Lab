@@ -8,5 +8,4 @@ COPY . .
 # RUN command: like trying to run a linux command
 RUN pip install -r requirements.txt
 
-
 CMD [ "python", "src/circle.py" ]
